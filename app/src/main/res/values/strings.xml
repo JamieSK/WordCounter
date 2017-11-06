@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WordCount</string>
+    <string name="count_words">Count Words</string>
+    <string name="input_text">Input Text</string>
+    <string name="input">Input Text</string>
+    <string name="total">Number of words: %d</string>
+</resources>
