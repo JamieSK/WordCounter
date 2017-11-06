@@ -13,7 +13,12 @@ public class WordCounter {
   }
 
   public static int wordCount(String text) {
-    return splitTextToWords(text).length;
+    String[] split = splitTextToWords(text);
+    if (split.length == 0 || split[0].equals("")) {
+      return 0;
+    } else {
+      return split.length;
+    }
   }
 
   public static HashMap<String, Integer> count(String text) {
@@ -36,6 +41,10 @@ public class WordCounter {
   public static String orderedStrings(String text) {
     HashMap<String, Integer> hash = count(text);
     StringBuilder result = new StringBuilder();
+
+    if (hash.isEmpty()) {
+      return "";
+    }
 
     for (int i = Collections.max(hash.values()); i > 0; i --) {
       for (String word : hash.keySet()) {
